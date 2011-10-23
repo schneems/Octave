@@ -227,7 +227,7 @@ costFunctionJ.m
   % X is the 'design matrix' containing our training examples
   % y is the class labels
 
-  m           = size(X, 1) % number of training examples
+  m           = size(X, 1)            % number of training examples
   predictions = X*theta;              % predictions of hypothesis on examples
   sqrErrors   = (predictions - y).^2; % squared errors
 
