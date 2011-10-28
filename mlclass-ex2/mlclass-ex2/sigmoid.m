@@ -1,5 +1,5 @@
 function g = sigmoid(z)
-%SIGMOID Compute sigmoid functoon
+%SIGMOID Compute sigmoid function
 %   J = SIGMOID(z) computes the sigmoid of z.
 
 % You need to return the following variables correctly 
