@@ -12,6 +12,12 @@ any code before the due date (homework is due every sunday). I will not post sol
 We strongly encourage students to form study groups, and discuss the lecture videos (including in-video questions). We also encourage you to get together with friends to watch the videos together as a group. However, the answers that you submit for the review questions should be your own work. For the programming exercises, you are welcome to discuss them with other students, discuss specific algorithms, properties of algorithms, etc.; we ask only that you not look at any source code written by a different student, nor show your solution code to other students.
 
 
+## Development
+
+To get Textmate Highlighting check out the [Octave Bundle](https://github.com/textmate/matlab.tmbundle) Just download and change the extension to `.tmbundle` and double click. After that go to Bundles >> Bundle Editor >> Reload Bundles.
+
+Select 'Matlab' as the file type when working with octave files
+
                 .
               .MM
              .MMMM                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
