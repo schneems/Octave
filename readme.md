@@ -11,6 +11,7 @@ any code before the due date (homework is due every sunday). I will not post sol
 ## Other Notable Open Source Machine Learning Sources
 
 https://github.com/everpeace/ml-class-assignments
+
 https://github.com/joewandy/Stanford-Machine-Learning
 
 
