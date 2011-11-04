@@ -235,3 +235,39 @@ costFunctionJ.m
 
 
 J % => 0
+
+
+
+Theta1 = ones(10,11);
+Theta2 = ones(10,11);
+Theta3 = 3*ones(10,11);
+
+thetaVec = [ Theta1(:); Theta2(:); Theta3(:)];
+
+Theta1 == reshape(thetaVec(1:110), 10, 11)
+
+gradApprox = (J(theta = EPSILON) - J(theta - EPSILON))/(2*EPSILON)
+
+for i = 1:n,
+  thetaPlus = theta;
+  thetaPlus(i) = thetaPlus(i) + EPSILON;
+  thetaMinus = theta;
+  thetaMinus(i) = thetaMinus(i) - EPSILON;
+  gradApprox(i) = (J(thetaPlus) - J(thetaMinus))/(2*EPSILON);
+end
+
+% check that gradApprox ~ DVec
+
+% - implement backprom to compute DVec (unrolled D1, D2, D3)
+% - implement numerical gradient check to compute gradApprox
+% - make sure they give similar values
+% - TURN OFF gradient checking using backprob code for learning with
+%   NO gradient checking
+
+optTheta = fminunc(@costFunction, initialTheta, options);
+
+initialTheta = zeros(n,1); % can we do better?
+
+% INIT_EPSILON is unrelated to EPSILON
+Theta1 = rand(10,11) * (2*INIT_EPSILON) - INIT_EPSILON;
+Theta1 = rand(1,11) * (2*INIT_EPSILON) - INIT_EPSILON;
