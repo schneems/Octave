@@ -271,3 +271,5 @@ initialTheta = zeros(n,1); % can we do better?
 % INIT_EPSILON is unrelated to EPSILON
 Theta1 = rand(10,11) * (2*INIT_EPSILON) - INIT_EPSILON;
 Theta1 = rand(1,11) * (2*INIT_EPSILON) - INIT_EPSILON;
+
+load('ex3data1.mat');
