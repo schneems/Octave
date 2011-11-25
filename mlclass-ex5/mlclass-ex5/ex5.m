@@ -40,7 +40,7 @@ xlabel('Change in water level (x)');
 ylabel('Water flowing out of the dam (y)');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% =========== Part 2: Regularized Linear Regression Cost =============
 %  You should now implement the cost function for regularized linear 
@@ -54,7 +54,7 @@ fprintf(['Cost at theta = [1 ; 1]: %f '...
          '\n(this value should be about 303.993192)\n'], J);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% =========== Part 3: Regularized Linear Regression Gradient =============
 %  You should now implement the gradient for regularized linear 
@@ -69,7 +69,7 @@ fprintf(['Gradient at theta = [1 ; 1]:  [%f; %f] '...
          grad(1), grad(2));
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% =========== Part 4: Train Linear Regression =============
@@ -94,7 +94,7 @@ plot(X, [ones(m, 1) X]*theta, '--', 'LineWidth', 2)
 hold off;
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% =========== Part 5: Learning Curve for Linear Regression =============
@@ -103,6 +103,8 @@ pause;
 %  Write Up Note: Since the model is underfitting the data, we expect to
 %                 see a graph with "high bias" -- slide 8 in ML-advice.pdf 
 %
+
+
 
 lambda = 0;
 [error_train, error_val] = ...
@@ -123,7 +125,7 @@ for i = 1:m
 end
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% =========== Part 6: Feature Mapping for Polynomial Regression =============
 %  One solution to this is to use polynomial regression. You should now
@@ -193,7 +195,7 @@ for i = 1:m
 end
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% =========== Part 8: Validation for Selecting Lambda =============
 %  You will now implement validationCurve to test various values of 
@@ -212,7 +214,7 @@ ylabel('Error');
 
 fprintf('lambda\t\tTrain Error\tValidation Error\n');
 for i = 1:length(lambda_vec)
-	fprintf(' %f\t%f\t%f\n', ...
+  fprintf(' %f\t%f\t%f\n', ...
             lambda_vec(i), error_train(i), error_val(i));
 end
 
