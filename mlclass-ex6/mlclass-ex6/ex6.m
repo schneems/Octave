@@ -72,6 +72,9 @@ fprintf(['Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
+
+
+
 %% =============== Part 4: Visualizing Dataset 2 ================
 %  The following code will load the next dataset into your environment and 
 %  plot the data. 
