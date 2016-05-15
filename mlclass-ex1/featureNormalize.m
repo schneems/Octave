@@ -35,6 +35,10 @@ for i = indicies,
   XminusMu  = X(:, i) - mu(i);
   X_norm(:, i) = XminusMu / sigma(i);
 end
+% you can run the same loop like this:
+% X_norm = (X - mu) ./ sigma;
+
+
 
 
 % ============================================================
