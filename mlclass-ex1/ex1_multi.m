@@ -29,7 +29,7 @@
 %% ================ Part 1: Feature Normalization ================
 
 %% Clear and Close Figures
-clear all; close all; clc
+clear ; close all; clc
 
 fprintf('Loading data ...\n');
 
@@ -83,7 +83,7 @@ fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
 alpha = 0.01;
-num_iters = 100;
+num_iters = 400;
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
@@ -92,19 +92,43 @@ theta = zeros(3, 1);
 % Plot the convergence graph
 figure;
 plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
+hold on;
 xlabel('Number of iterations');
 ylabel('Cost J');
+
+
+%repeat with another alpha value
+alpha = 0.5;
+
+% Init Theta and Run Gradient Descent 
+theta = zeros(3, 1);
+[theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
+plot(1:numel(J_history), J_history, '-r', 'LineWidth', 2);
+hold off;
+
 
 % Display gradient descent's result
 fprintf('Theta computed from gradient descent: \n');
 fprintf(' %f \n', theta);
 fprintf('\n');
 
+% plot result
+plotData(X, y);
+hold on; % keep previous plot visible
+plot(X(:,2), X*theta, '-')
+legend('Training data', 'Multivariate linear regression')
+hold off % don't overlay any more plots on this figure
+
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
+x = [1650 3]; % new house data
+x = (x - mu) ./sigma; % normalize with same values as X
+x = [1 x]; % add x[0] = 1
+price = x * theta; % calucalte price with our theta values
+
+
 
 
 % ============================================================
@@ -149,7 +173,8 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+x = [1 1650 3]; % new house data
+price = x * theta; % calucalte price with our theta values
 
 
 % ============================================================

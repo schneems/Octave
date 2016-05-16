@@ -18,7 +18,7 @@ for iter = 1:num_iters
     %
         
     E = X * theta - y;
-    thetas = size(theta)
+    thetas = size(theta);
     for t = 1:thetas
       result(t) = sum(E.* X(:,t));
     end
@@ -32,4 +32,3 @@ for iter = 1:num_iters
 end
 
 end
-

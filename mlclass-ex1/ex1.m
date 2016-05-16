@@ -24,7 +24,7 @@
 %
 
 %% Initialization
-clear all; close all; clc
+clear ; close all; clc
 
 %% ==================== Part 1: Basic Function ====================
 % Complete warmUpExercise.m 
@@ -57,14 +57,13 @@ theta = zeros(2, 1); % initialize fitting parameters
 
 % Some gradient descent settings
 iterations = 1500;
-alpha = 0.01;
+alpha = 0.001;
 
 % compute and display initial cost
 computeCost(X, y, theta)
 
 % run gradient descent
 theta = gradientDescent(X, y, theta, alpha, iterations);
-
 % print theta to screen
 fprintf('Theta found by gradient descent: ');
 fprintf('%f %f \n', theta(1), theta(2));
@@ -120,3 +119,16 @@ contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 3, 20))
 xlabel('\theta_0'); ylabel('\theta_1');
 hold on;
 plot(theta(1), theta(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
+
+x = [1 16]; % new house data
+price = x * theta; % calucalte price with our theta values
+fprintf(['Predicted 16' ...
+         '(using gradientDescent):\n $%f\n'], price);
+
+         
+theta = normalEqn(X, y);
+
+x = [1 16]; % new house data
+price = x * theta; % calucalte price with our theta values
+fprintf(['Predicted 16' ...
+         '(using normal equations):\n $%f\n'], price);
