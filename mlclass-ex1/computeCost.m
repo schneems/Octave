@@ -5,8 +5,10 @@ function J = computeCost(X, y, theta)
 
 % Initialize some useful values
 m = length(y); % number of training examples
+predictions = X * theta;
+sqrErrors = (predictions-y).^2;
 
-% You need to return the following variables correctly 
+% You need to return the following variables correctly
 J = 0;
 
 % ====================== YOUR CODE HERE ======================
@@ -14,10 +16,10 @@ J = 0;
 %               You should set J to the cost.
 
 
-predictions = X*theta;              % predictions of hypothesis on examples
-sqrErrors   = (predictions - y).^2; % squared errors
-
 J = 1/(2*m) * sum(sqrErrors);
+
+
+% see alternative at computeCostMulti
 
 
 % =========================================================================
