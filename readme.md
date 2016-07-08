@@ -1,3 +1,5 @@
+> I took this class 5+ years ago. Please don't open any issues or pull requests. All examples come as is.
+
 # Octave
 
 [Octave](http://www.gnu.org/software/octave/) is a high level (open source) programming language similar to Matlab. I'm using it for the [2011 Stanford Machine Learning Class](http://www.ml-class.org).
