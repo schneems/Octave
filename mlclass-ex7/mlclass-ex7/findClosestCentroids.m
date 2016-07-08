@@ -22,7 +22,23 @@ idx = zeros(size(X,1), 1);
 %
 
 
+for i = 1 : size(X,1)
+  x_i = X(i,:);
 
+  min_c_i = intmax;
+  k_idx = intmax;
+  for k =1 : K
+    k_i = centroids(k,:);
+    j = sum((x_i - k_i).^2);
+    if j < min_c_i 
+      min_c_i = j;
+      k_idx = k;
+    endif
+  endfor
+  
+  idx(i) = k_idx;
+  
+endfor
 
 
 
