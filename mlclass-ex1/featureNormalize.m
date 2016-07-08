@@ -5,11 +5,6 @@ function [X_norm, mu, sigma] = featureNormalize(X)
 %   is 1. This is often a good preprocessing step to do when
 %   working with learning algorithms.
 
-% You need to set these values correctly
-X_norm = X;
-mu = zeros(1, size(X, 2));
-sigma = zeros(1, size(X, 2));
-
 % ====================== YOUR CODE HERE ======================
 % Instructions: First, for each feature dimension, compute the mean
 %               of the feature and subtract it from the dataset,
@@ -29,9 +24,7 @@ sigma = zeros(1, size(X, 2));
 mu    = mean(X)
 sigma = std(X)
 
-indicies = 1:size(X, 2);
-
-for i = indicies,
+for i = 1:columns(X),
   XminusMu  = X(:, i) - mu(i);
   X_norm(:, i) = XminusMu / sigma(i);
 end
