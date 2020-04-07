@@ -123,7 +123,7 @@ pause;
 %  We display the first 36 eigenfaces.
 %
 fprintf(['\nRunning PCA on face dataset.\n' ...
-         '(this mght take a minute or two ...)\n\n']);
+         '(this might take a minute or two ...)\n\n']);
 
 %  Before running PCA, it is important to first normalize X by subtracting 
 %  the mean value from each feature
@@ -187,7 +187,7 @@ pause;
 
 close all; close all; clc
 
-% Re-load the image from the previous exercise and run K-Means on it
+% Reload the image from the previous exercise and run K-Means on it
 % For this to work, you need to complete the K-Means assignment first
 A = double(imread('bird_small.png'));
 

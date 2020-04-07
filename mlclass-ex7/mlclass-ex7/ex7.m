@@ -24,7 +24,7 @@ clear ; close all; clc
 %% ================= Part 1: Find Closest Centroids ====================
 %  To help you implement K-Means, we have divided the learning algorithm 
 %  into two functions -- findClosestCentroids and computeCentroids. In this
-%  part, you shoudl complete the code in the findClosestCentroids function. 
+%  part, you should complete the code in the findClosestCentroids function. 
 %
 fprintf('Finding closest centroids.\n\n');
 
@@ -98,7 +98,7 @@ pause;
 %% ============= Part 4: K-Means Clustering on Pixels ===============
 %  In this exercise, you will use K-Means to compress an image. To do this,
 %  you will first run K-Means on the colors of the pixels in the image and
-%  then you will map each pixel on to it's closest centroid.
+%  then you will map each pixel onto its closest centroid.
 %  
 %  You should now complete the code in kMeansInitCentroids.m
 %
@@ -152,7 +152,7 @@ idx = findClosestCentroids(X, centroids);
 % indices in idx. 
 
 % We can now recover the image from the indices (idx) by mapping each pixel
-% (specified by it's index in idx) to the centroid value
+% (specified by its index in idx) to the centroid value
 X_recovered = centroids(idx,:);
 
 % Reshape the recovered image into proper dimensions
