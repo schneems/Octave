@@ -1,4 +1,6 @@
-> I took this class 5+ years ago. Please don't open any issues or pull requests. All examples come as is.
+> This is a forked repo. The original repo helped me a lot through the course, so I'm sharing the uncomplete Exercises.
+> I strongly recommend, though, trying to solve the problems on your own, and checking those answer only if you get stuck.
+> Please don't open any issues or pull requests. All examples come as is.
 
 # Octave
 
@@ -70,6 +72,6 @@ Select 'Matlab' as the file type when working with octave files
 ## License
 
 Solutions licensed under MIT License
-Copyright (c) 2011 [Schneems](http://twitter.com/schneems). See LICENSE.txt for
+Copyright (c) 2011 [daniel_izumi](http://twitter.com/daniel_izumi). See LICENSE.txt for
 further details.
 

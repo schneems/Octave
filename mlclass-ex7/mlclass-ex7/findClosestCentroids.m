@@ -21,10 +21,22 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+m = size(X, 1);
 
+for i = 1:m
+	initial_cost = 999999;
+	for k = 1:K
 
+		cost = sum((X(i, :) - centroids(k, :)) .^ 2) ^ 2;
 
+		if cost < initial_cost
+			initial_cost = cost;
+			idx(i) = k;
+		end
 
+	end
+
+end
 
 
 % =============================================================
